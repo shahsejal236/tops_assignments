@@ -28,11 +28,13 @@ Route::get('/', function () {
 
 
  //===login & logout===//
-
+ Route::group(['middleware'=>['adminbeforelogin']],function(){
  Route::get('/adminlogin',[adminController::class,'login']);
  Route::post('/adminlogin',[adminController::class,'adminlogincheck']); // Login Check
+ });
 
-  
+
+ Route::group(['middleware'=>['adminafterlogin']],function(){
  Route::get('/adminlogout',[adminController::class,'adminlogout']);//logout
  Route::get('/manage_user',[userController::class,'manage_user']);   
  Route::get('/manage_user/{id}',[userController::class,'destroy']);
@@ -47,6 +49,7 @@ Route::get('/manage_employee', function () {
     return view('backend.manage_employee');
 });
 
+});
 
 //============================================= frontend Routes ===================================================//
 

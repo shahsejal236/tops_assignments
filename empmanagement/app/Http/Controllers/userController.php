@@ -45,19 +45,7 @@ class userController extends Controller
 
      public function store(Request $request) {
      
-        /*$request->validate([
-            'fname' => 'required',
-            'lname' => 'required',
-            'gender' => 'required',
-            'phone_no' => 'required',
-            'age' => 'required',
-            'address' => 'address',
-            'email' => 'required|unique:employees',
-            'password' => 'required|min:3|max:12'
-
-        ]);
-*/
-
+   
         DB::table('employee')->insert([
             'fname' => $request->fname,
             'lname' => $request->lname,

@@ -43,7 +43,6 @@
                                             <th>Address</th>
                                             <th>Email Id</th>
                                            
-                                            <th>Status </th>
                                             <th>Delete</th>
 
                                         </tr>
@@ -62,7 +61,7 @@
                                             <td>{{$d->age}}</td>
                                             <td>{{$d->address}}</td>
                                             <td>{{$d->email}}</td>
-                                            <td><a href="{{url('/manage_user/'.$d->id)}}" class="btn btn-Primary">Status</a></td>
+                                            
 
                                             <td><a href="{{url('/manage_user/'.$d->id)}}" class="btn btn-danger">Delete</a></td>
                                             

@@ -13,7 +13,7 @@ class adminController extends Controller
 {
     //
 
-	
+	// Admin Login
 
     public function login()
     {
